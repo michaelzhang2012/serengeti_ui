@@ -1,9 +1,9 @@
-package com.vmware.qe.asg.testsuite.ui.test;
+package demo;
 
 import org.testng.annotations.Test;
 
-import com.vmware.qe.asg.framework.ui.UITestBase;
-import com.vmware.qe.asg.framework.ui.system.LoginPage;
+import com.vmware.ui.common.UITestBase;
+import com.vmware.ui.pages.LoginPage;
 
 public class LoginTest extends UITestBase {
 	
