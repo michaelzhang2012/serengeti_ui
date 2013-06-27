@@ -1,0 +1,37 @@
+<settings>
+ <proxies>
+   <proxy>
+     <active>true</active>
+     <protocol>http</protocol>
+     <host>proxy.vmware.com</host>
+     <port>3128</port>
+     <nonProxyHosts>*.eng.vmware.com|*.vmware.com</nonProxyHosts>
+   </proxy>
+ </proxies>
+
+ <mirrors>
+    <mirror>
+      <id>Internal-maven-repo</id>
+      <name>VMware Nexus Repo</name>
+      <url>http://build-squid.eng.vmware.com/nexus/content/groups/repo</url>
+      <mirrorOf>external:*</mirrorOf>
+    </mirror>
+ </mirrors>
+
+
+   <!--
+     Enable caching and use of cached objects from build-squid.
+     This only works with the lightweight HTTP wagon which is not
+     the default in Maven 2.2.0; use Maven 2.2.1 instead.
+     See http://stackoverflow.com/questions/4054884/why-does-maven-disable-caching-for-http-requests
+     and http://maven.apache.org/guides/mini/guide-http-settings.html
+     -->
+ <servers>
+   <server>
+     <id>Internal-maven-repo</id>
+     <configuration>
+       <useCache>true</useCache>
+     </configuration>
+   </server>
+  </servers>
+</settings>

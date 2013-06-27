@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenario name="AccessZone">
+
+	<Test name="CreateAccessZone">
+		<Datablock name="CreateZone">
+			<Input>
+				<Parameter name="ADMIN_USR" value="root" />
+				<Parameter name="ADMIN_PASSWORD" value="ca$hc0w" />
+				<Parameter name="CREATEZONENAME" value="test" />				
+			</Input>
+		</Datablock>
+	</Test>
+	
+	<Test name="EditAccessZone">
+		<Datablock name="EditZone">
+			<Input>
+				<Parameter name="CREATEZONENAME" value="test" />
+				<Parameter name="EDITZONENAME" value="edittest" />				
+			</Input>
+		</Datablock>
+	</Test>
+	
+	<Test name="DeleteAccessZone">
+		<Datablock name="DeleteZone">
+			<Input>
+				<Parameter name="EDITZONENAME" value="edittest" />				
+			</Input>
+		</Datablock>
+	</Test>
+</Scenario>
